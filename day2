@@ -1,0 +1,133 @@
+package com.javaex.helloworld;
+
+import java.util.Scanner;
+
+public class day2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		/*
+		 * System.out.println("당신의 점수는 :"); Scanner sc = new Scanner(System.in); int x =
+		 * sc.nextInt();
+		 * 
+		 * if (x >= 60) { System.out.println("당신은 합격입니다."); } else {
+		 * System.out.println("당신은 불합격입니다."); }
+		 */
+
+		/*
+		 * System.out.println("숫자를 입력하시오 :"); Scanner sc = new Scanner(System.in); int x
+		 * = sc.nextInt();
+		 * 
+		 * if (x > 0) { System.out.println("양수"); } else if (x < 0) {
+		 * System.out.println("음수"); } else if (x == 0) { System.out.println("0입니다."); }
+		 */
+
+		/*
+		 * System.out.println("숫자를 입력하시오 :"); Scanner sc = new Scanner(System.in); int x
+		 * = sc.nextInt();
+		 * 
+		 * if (x > 0) {
+		 * 
+		 * if (x % 2 == 0) { System.out.println("짝수입니다"); } if (x % 2 == 1) {
+		 * System.out.println("홀수입니다"); } } else if (x < 0) {
+		 * System.out.println("음수입니다."); } else if (x == 0) {
+		 * System.out.println("0입니다."); }
+		 */
+
+		/*
+		 * System.out.println("과목을 선택하세요");
+		 * System.out.println("(1.Java 2.C 3. C++ 4. Python)"); Scanner sc = new
+		 * Scanner(System.in); int x = sc.nextInt();
+		 * 
+		 * if (x == 1) { System.out.println("R101호 입니다."); } else if (x == 2) {
+		 * System.out.println("R202호 입니다."); } else if (x == 3) {
+		 * System.out.println("R303호 입니다."); } else if (x == 4) {
+		 * System.out.println("R404호 입니다."); } else if (x >= 5 || x < 1) {
+		 * System.out.println("상담원에게 문의하세요"); }
+		 */
+		/*
+		 * System.out.println("과목을선택하세요\n(1.Java 2.C 3. C++ 4. Python)"); Scanner sc =
+		 * new Scanner(System.in); int x = sc.nextInt(); String result;
+		 * 
+		 * switch (x) { case 1: System.out.println("101호입니다."); break; case 2:
+		 * System.out.println("202호입니다."); break; case 3:
+		 * System.out.println("303호입니다."); break; case 4:
+		 * System.out.println("404호입니다."); break; default:
+		 * System.out.println("상담원에게 문의하세요"); break;
+		 * 
+		 * }
+		 */
+
+		/*
+		 * System.out.println("월을 입력하세요"); Scanner sc = new Scanner(System.in); int x =
+		 * sc.nextInt();
+		 * 
+		 * 
+		 * switch (x) { case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+		 * System.out.println("31일 입니다."); break; case 2:
+		 * System.out.println("28일 입니다."); default: System.out.println("30일 입니다.");
+		 * 
+		 * }
+		 */
+
+		/*
+		 * System.out.println("점수를 입력하세요"); Scanner sc = new Scanner(System.in); int x =
+		 * sc.nextInt();
+		 * 
+		 * if (x != 0) {
+		 * 
+		 * if (x % 3 == 0) { // if((i != 0) && (i%3 == 0))
+		 * System.out.println("3의배수 입니다."); } } else { System.out.println(x + "는" +
+		 * "3의배수가 아닙니다."); }
+		 */
+
+		/*
+		 * System.out.println("점수를 입력하세요"); Scanner sc = new Scanner(System.in); int x =
+		 * sc.nextInt();
+		 * 
+		 * if(x>=90) { System.out.println("A등급"); } else if(80<=x&&x<=89) {
+		 * System.out.println("B등급"); } else if(70<=x&&x<=79) {
+		 * System.out.println("C등급"); } else if(60<=x&&x<=69) {
+		 * System.out.println("D등급"); } else { System.out.println("F등급"); }
+		 */
+
+		/*
+		 * int x = 0; while (x < 5) { System.out.println("i like java" + x); x++; }
+		 */
+		/*
+		 * System.out.println("단을 입력해 주세요"); Scanner sc = new Scanner(System.in); int x
+		 * = sc.nextInt();
+		 * 
+		 * int i = 1; while (i < 10) { System.out.println(x + "*" + i + "=" + x * i);
+		 * i++; }
+		 */
+		/*
+		 * System.out.println("단을 입력해 주세요"); Scanner sc = new Scanner(System.in); int x
+		 * = sc.nextInt();
+		 * 
+		 * for (int i = 1; i < 10; i++) { System.out.println(x + " " + "*" + " " + i +
+		 * " " + "=" + " " + x * i); }
+		 */
+
+		/*
+		 * while (true) { System.out.println("숫자를 입력해주세요"); Scanner sc = new
+		 * Scanner(System.in); int x = sc.nextInt(); if (x == 0) {
+		 * System.out.println("종료"); break; } else if (x % 3 == 0) {
+		 * System.out.println("3의배수"); } else { System.out.println("3의배수가 아니다"); }
+		 * 
+		 * }
+		 */
+
+		/*
+		 * for(int i=0; i<21; i++) { if(i%2==0 || i%3==0) { continue; }else {
+		 * System.out.println(i); }
+		 * 
+		 * 
+		 * }
+		 */
+		
+		
+		
+	}
+}
