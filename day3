@@ -36,3 +36,19 @@
 		 * }
 		 */
                  //두배열의 크기비교
+		int[] lotto = new int[6];
+
+                /* // 미니 로또 만들기(중복체크함)
+                 for(int i = 0; i<lotto.length ; i++) {
+                 lotto[i] = (int)(Math.random()*45) + 1;
+                 for(int j=0; j < i; j++) {
+                // 현재 번호가 이전 번호랑 같다면 다시...
+                if(lotto[j] == lotto[i]) {
+                i--;  // for 제어 ( 이전자리로 되돌리기 )
+                   }
+                 }
+                }
+                // 완성된 로또 번호 출력
+               for(int i = 0; i<lotto.length ; i++) {
+               System.out.print(lotto[i] + " " );
+                }*/
