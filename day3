@@ -89,6 +89,21 @@
 			}
 			System.out.println();
 		}//
+                
+                //연습문제 4번
+                Scanner sc = new Scanner(System.in);
+		System.out.println("Input Number");
+		
+		int num, maxNum=0;
+		
+		for (int i=1; i<=5; i++) {
+			System.out.println("Number :");
+			num = sc.nextInt();
+			if(num > maxNum) {
+				maxNum = num;
+			}
+		}
+		System.out.println("Max Number is "+ maxNum );//
 
 
 
