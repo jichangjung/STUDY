@@ -134,6 +134,34 @@
 			}
 			System.out.println("결과값 :"+ sum);//
 
+//연습문제7
+int num = (int) (Math.random() * 1) + 1;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("숫자맞추게 게임");
+
+		for (;;) {
+			System.out.print(">>");
+			int x = sc.nextInt();
+			if (x == num) {
+				System.out.println("맞습니다");
+				System.out.print("게임을 종료하시겠습니까?(y/n)>>");
+				String r = sc.next();
+				if(r.equals("y")) {
+					System.out.println("게임종료");
+					break;
+				}else {
+				 System.out.println("재시작");
+				}
+
+			} else if (x > num) {
+				System.out.println("더낮게");
+
+			} else {
+				System.out.println("더높게");
+
+			}
+		}
+
 
 
 
