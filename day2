@@ -126,6 +126,31 @@ public class day2 {
 		 * 
 		 * }
 		 */
+
+                 /*for( int a = 2; a < 10; a++) {
+	          *//System.out.println(a);
+		  *for(int b = 1; b < 10; b++) {
+		  *System.out.println(a +" * "+ b + " = " + a*b);
+		  *}
+		  *}
+                  */
+                
+                 /*for( int a = 1; a <= 5; a++) {
+		  *for(int b = 1; b <= a; b++) {
+		  *//System.out.print(a);
+		  *System.out.print("*");
+		  *}
+		  *System.out.println();
+		  *}
+                  */
+
+                 /*do {
+		  *num = sc.nextInt();
+		  *sum += num; // sum = sum + num;
+	          *System.out.println("합계 : " + sum);
+		  *}while(num!=0);
+                  */
+
 		
 		
 		
