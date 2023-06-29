@@ -48,3 +48,17 @@ char c[] = {'T','h','i','s',' ','i','s',' ','a',' ','p','e','n','c','i','l'};
 		}
 		System.out.println("");
 		System.out.println(c);
+//연습문제 4번
+int []data = {50000,10000,5000,1000,500,100,50,10,5,1};
+		
+		System.out.print("금액 : "); 
+		Scanner sc = new Scanner(System.in); 
+		int x = sc.nextInt();
+		
+		for(int i =0; i<data.length; i++) {
+			int won = data[i];
+			int count = x / won;
+			x= x -(count*won);
+			System.out.println(won + "원 : "+count+"개");
+		}
+		sc.close();
