@@ -134,8 +134,8 @@
 			}
 			System.out.println("결과값 :"+ sum);//
 
-//연습문제7
-int num = (int) (Math.random() * 1) + 1;
+              //연습문제7
+                int num = (int) (Math.random() * 1) + 1;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("숫자맞추게 게임");
 
