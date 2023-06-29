@@ -1,0 +1,48 @@
+		// 연습문제 1번
+		/*
+		 * int i = 1;
+		 * 
+		 * while(true) { if(i<=100) { if(i%5==0 && i%7==0) { System.out.println(i); }
+		 * }else { break; }i++; }
+		 */
+		// 연습문제 2번
+		/*
+		 * System.out.println("숫자를 입력하세요"); Scanner sc = new Scanner(System.in); int x =
+		 * sc.nextInt();
+		 * 
+		 * for(int i = 1; i<=x; i++) { for(int j =1; j<=i; j++) { System.out.print(i); }
+		 * System.out.println(); }
+		 */
+		// 연습문제 3번
+		/*
+		 * for (int i = 1; i < 10; i++) { for (int j = 2; j <= 9; j++) {
+		 * System.out.print(j + "*" + i + "=" + i * j + "\t");
+		 * 
+		 * } System.out.println();
+		 * 
+		 * }
+		 */
+
+		// 연습문제 4번
+		/*
+		 * int num = 0; int maxNum = 0;
+		 * 
+		 * for (int i = 1; i <= 5; i++) { System.out.print("숫자 :"); Scanner sc = new
+		 * Scanner(System.in); num = sc.nextInt(); if (num > maxNum) { maxNum = num; } }
+		 * System.out.println(maxNum);
+		 */
+    // 연습문제 5번
+		/*
+		 * for(int i=1; i<=10; i++) { for(int j=i; j<=i+9; j++) {
+		 * System.out.print(j+"\t"); } System.out.println(); }
+		 */
+		// 연습문제 6번
+		/*
+		 * System.out.println("숫자를 입력하세요"); Scanner sc = new Scanner(System.in); int x =
+		 * sc.nextInt(); int sum = 0; int snum = 0;
+		 * 
+		 * if (x % 2 == 0) { snum = 0; } else { snum = 1; } for (int i = snum; i <= x; i
+		 * += 2) { sum += i; } System.out.println(sum);
+		 */
+	}
+}
