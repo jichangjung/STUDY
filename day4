@@ -62,3 +62,202 @@ int []data = {50000,10000,5000,1000,500,100,50,10,5,1};
 			System.out.println(won + "원 : "+count+"개");
 		}
 		sc.close();
+// 클래스정의(Goods)
+package com.javaex.c2;
+
+public class Goods {
+
+	private String name;
+	private int price;
+
+	public void setName(String newName) {
+		this.name = newName;
+	}
+
+	public void setPrice(int newPrice) {
+		this.price = newPrice;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public int getPrice() {
+		return this.price;
+	}
+	public void showInfo() {
+		System.out.println("상품이름 : "+ this.name);
+		System.out.println("상품가격 : "+ this.price);
+	}
+}//
+//클래스정의(GooodsApp)
+package com.javaex.c2;
+
+public class GoodsAPP {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Goods g1 = new Goods();
+		Goods g2 = new Goods();
+		Goods g3 = new Goods();
+
+		g1.setName("니콘");
+		g1.setPrice(400000);
+
+		g2.setName("LG그램");
+		g2.setPrice(900000);
+
+		g3.setName("머그컵");
+		g3.setPrice(2000);
+
+		g3.showInfo();
+		g2.showInfo();
+		g1.showInfo();
+
+	}
+}//
+//(Point)
+package com.javaex.c2;
+
+public class Point {
+
+	private int x;
+	private int y;
+	
+	public int getX() {
+		return x;
+	}
+	public void setX(int x) {
+		this.x = x;
+	}
+	public int getY() {
+		return y;
+	}
+	public void setY(int y) {
+		this.y = y;
+	}
+	
+	public void draw() {
+		System.out.println("점 x= "+this.x+"을 그렸습니다.");
+		System.out.println("점 y= "+this.y+"을 그렸습니다.");
+	}
+
+}//
+//(PointApp)
+package com.javaex.c2;
+
+public class PointApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Point g1 = new Point();
+		Point g2 = new Point();
+
+		g1.setX(5);
+		g1.setY(5);
+
+		g2.setX(5);
+		g2.setY(5);
+
+		
+
+		g2.draw();
+		g1.draw();
+
+	}
+
+}//
+//(Song)
+package com.javaex.ch2;
+​
+public class Song {
+	
+	private String title;
+	private String artist;
+	private String album;
+	private String composer;
+	private String year;
+	public String getYear() {
+		return year;
+	}
+	public void setYear(String year) {
+		this.year = year;
+	}
+	private String track;
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getArtist() {
+		return artist;
+	}
+	public void setArtist(String artist) {
+		this.artist = artist;
+	}
+	public String getAlbum() {
+		return album;
+	}
+	public void setAlbum(String album) {
+		this.album = album;
+	}
+	public String getComposer() {
+		return composer;
+	}
+	public void setComposer(String composer) {
+		this.composer = composer;
+	}
+​
+	public String getTrack() {
+		return track;
+	}
+	public void setTrack(String track) {
+		this.track = track;
+	}
+	
+	@Override
+	public String toString() {
+		return "Song [title=" + title + ", artist=" + artist + ", album=" + album + ", composer=" + composer + ", year="
+				+ year + ", track=" + track + "]";
+	}
+	
+	//아이유, 좋은날 ( Real, 2010, 3번 track, 이민수 작곡 )
+	public void showInfo() {
+		System.out.print(artist + ", " + title + " ( " + album +  ", " );
+		System.out.println(year + ", "+  track + "번 track, " + composer + "작곡 )");
+		
+	}
+	
+​
+}//
+//(SongApp)
+package com.javaex.ch2;
+​
+public class SongApp {
+​
+	public static void main(String[] args) {
+		Song s1 = new Song();
+		s1.setArtist("아이유");
+		s1.setTitle("좋은날");
+		s1.setAlbum("Real");
+		s1.setYear("2010");
+		s1.setTrack("3");
+		s1.setComposer("이민수");
+		
+		Song s2 = new Song();
+		s2.setArtist("BIGBANG");
+		s2.setTitle("거짓말");
+		s2.setAlbum("Always");
+		s2.setYear("2007");
+		s2.setTrack("2");
+		s2.setComposer("G-DRAGON");
+		
+		s1.showInfo();
+		s2.showInfo();
+​
+	}
+​
+}
