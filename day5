@@ -190,4 +190,197 @@ public class TVApp {
 		
 		tv.power(false);
 		tv.status();
+	}//
+//myMath
+public class myMath {
+	
+	private static double PI = 3.14;
+	public static int plus(int a, int b) {
+		return a + b;
 	}
+
+	public static double plus(double a, double b) {
+		return a + b;
+	}
+
+	public static double CircleArea(int radius) {
+		return radius * radius * PI;
+	}
+	
+}//
+//myMathApp
+public class myMathApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		myMath m = new myMath();
+		
+		 int x = m.plus(1, 2);
+		 System.out.println(x);
+		 
+		 double y = m.plus(1.0, 2.0);
+		 System.out.println(y);
+		 
+		 double z = m.CircleArea(5);
+		 System.out.println(z);
+
+	}
+
+}//
+//Person
+public class Person {
+	private String name;
+	private int age;
+	public Person() {
+		super();
+	}
+	public Person(String name, int age) {
+		super();
+		this.name = name;
+		this.age = age;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", age=" + age + "]";
+	}
+	
+	public void showInfo() {
+		System.out.println(this);
+	}
+}//
+//Student
+​
+public class Student extends Person{
+	private String schoolName;
+​
+	public Student() {
+		super();
+	}
+​
+	public Student(String schoolName) {
+		super();
+		this.schoolName = schoolName;
+	}
+	
+	public Student(String name, int age, String schoolName) {
+		super(name, age);
+		this.schoolName = schoolName;
+	}
+​
+	public String getSchoolName() {
+		return schoolName;
+	}
+​
+	public void setSchoolName(String schoolName) {
+		this.schoolName = schoolName;
+	}
+​
+	@Override
+	public String toString() {
+		return "Student [name ="+super.getName()+" age ="+super.getAge()+" schoolName=" + schoolName + "]";
+	}
+	
+	public void showInfo() {
+		System.out.println(this);
+	}
+​
+}//
+//PersonApp
+public class PersonApp {
+​
+	public static void main(String[] args) {
+		Person p = new Person("정우성", 45);
+		Student s1 = new Student("서울고등학교");
+		Student s2 = new Student("이정재", 45, "한국고");
+		
+		p.showInfo();
+		s1.showInfo();
+		s2.showInfo();
+​
+	}
+​
+}// Person-Student-PersonApp 묶음
+//Person
+public class Person {
+	private String name;
+	private int age;
+	public Person() {
+		super();
+	}
+	public Person(String name, int age) {
+		super();
+		this.name = name;
+		this.age = age;
+		System.out.println( this.getClass().getName() + "생성자 호출됨" );
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", age=" + age + "]";
+	}
+	
+	public void showInfo() {
+		System.out.println(this);
+	}
+}//
+//Sudent
+​
+public class Student extends Person{
+	private String schoolName;
+​
+	public Student() {
+		super();
+	}
+​
+	public Student(String schoolName) {
+		super();
+		this.schoolName = schoolName;
+	}
+	
+	public Student(String name, int age, String schoolName) {
+		super(name, age);
+		this.schoolName = schoolName;
+		System.out.println( this.getClass().getName() + "생성자 호출됨" );
+	}
+​
+	public String getSchoolName() {
+		return schoolName;
+	}
+​
+	public void setSchoolName(String schoolName) {
+		this.schoolName = schoolName;
+	}
+​
+	@Override
+	public String toString() {
+		return "Student [name ="+super.getName()+" age ="+super.getAge()+" schoolName=" + schoolName + "]";
+	}
+	
+	public void showInfo() {
+		System.out.println(this);
+	}
+​
+}//
