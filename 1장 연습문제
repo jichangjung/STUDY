@@ -46,3 +46,38 @@
 		 */
 	}
 }
+//연습문제 7번
+for (;;) {
+
+			int num = (int) (Math.random() * 1) + 1;
+			System.out.println("===============================================" + "\n" + "            [숫자 맞추기 게임시작]"
+					+ "\n" + "===============================================");
+
+			for (;;) {
+				System.out.println(">>");
+				Scanner sc = new Scanner(System.in);
+				int x = sc.nextInt();
+				if (x > num) {
+					System.out.println("더 낮게");
+				} else if (x < num) {
+					System.out.println("더 높게");
+				} else {
+					System.out.println("맞았습니다.");
+					break;
+				}
+			}
+			System.out.println("게임을 종료하시겠습니까? (y/n) >>");
+			Scanner sc = new Scanner(System.in);
+			String s = sc.next();
+
+			if ("y".equals(s)) {
+				System.out.println("===============================================" + "\n"
+						+ "            [숫자 맞추기 게임종료]" + "\n" + "===============================================");
+
+				break;
+			}
+		}
+
+	}
+
+}
