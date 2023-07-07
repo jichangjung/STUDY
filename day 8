@@ -1,0 +1,259 @@
+//클래스명 : CarSmart
+//조상클래스 : Car
+//멤버변수 : 데이터타입-변수명-용도
+//boolean - autoMode - 자동 운전 여부
+//생성자
+// 매개변수를 4개 갖는 생성자 - 문의개수,색상, 기어타입, 자동운전 모드를 전달받아 멤버변수 초기화
+// 기본생성자 - 문의갯수는 3, 색상은 white, 기어타입은 auto, 자동운전모드는 false로 초기화
+//메서드 
+//isAutoMode - 반환타입 boolean - 자동운전모드 여부를 반환- 전달인자 없음
+//toStirng()을 오버라이드 - 모든 멤버 변수를 문자열로 반환
+class CarSmart extends Car{
+	boolean autoMode;
+	
+	CarSmart(int door, String color, String gearType, boolean autoMode){
+		super(door, color, gearType);
+		this.autoMode=autoMode;
+	}
+	
+	CarSmart(){
+		this(3, "white", "auto", false);
+	}
+	
+	boolean isAutoMode() {
+		return autoMode;
+	}
+	
+	@Override
+	public String toString() {
+		
+		String str = (autoMode)? "자동운전모드" : "수동운전모드" ;
+		
+		return "스마트카 설정 " + super.toString() + ", " + str;
+	}
+}
+public class Car {
+	
+	int door;
+	String color;
+	String gearType;
+	
+	Car(int door, String color, String gearType){
+		this.door = door;
+		this.color = color;
+		this.gearType = gearType;
+	}
+	
+	Car(){
+		this(3, "white", "auto");
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return door + ", " + color + ", " + gearType;
+	}
+
+}//
+//
+class Student {
+   String name;
+   int ban;
+   int no;
+   int kor;
+   int eng;
+   int math;
+   
+   Student(String name, int ban, int no){
+      this(name, ban, no, -1, -1, -1);
+   }
+   
+   Student(String name, int ban, int no, int kor, int eng, int math){
+      this.name = name;
+      this.ban = ban;
+      this.no = no;
+      this.kor = kor;
+      this.eng = eng;
+      this.math = math;
+   }
+   
+   void setKor(int kor) {
+      this.kor = kor;
+   }
+   
+   void setEng(int eng) {
+      this.eng = eng;
+   }
+   
+   void setMath(int math) {
+      this.math = math;
+   }
+   
+   int getKor() {
+      return kor;
+   }
+   
+   int getEng() {
+      return eng;
+   }
+   
+   int getMath() {
+      return math;
+   }
+   
+   int getTotal() {
+      return kor + eng + math;
+   }
+   
+   float getAverage() {
+      float avg = getTotal()/3f;
+      avg = ((int)((avg+0.05)*10))/10f;
+      return avg;
+   }
+   
+   @Override
+   public java.lang.String toString() {
+
+      return name + ", " + ban 
+            + ", " + no 
+            + ", " + kor 
+            + ", " + eng
+            + ", " + math
+            + ", " + getTotal()
+            + ", " + getAverage()
+                ;
+   }
+
+}//
+
+////클래스명 : StudentEx
+//조상클래스명 : Student
+//멤버변수 : 데이터타입-변수명-용도
+//			int -java - 자바 파일명
+//생성자
+//매개변수가 3개인 생성자 - 이름, 반, 번호를 전달받아 초기화, 모든 점수는 -1로 초기화
+//매개변수가 7개인 생성자 - 이름, 반, 번호, 국영수, 자바 점수를 전달받아 멤버변수를 초기화
+//메서드 : 메서드명-반환타입-기능-전달인자
+//setJava - void-자바점수설정-자바점수
+//getJava - int - 자바점수를 반환, 전달인자 없음
+//getTotal-int-국영수와 자바 총점을 반환, 점수가 입력되기 전이면 오류 메세지
+//toString 오버라이딩 - 모든 멤버변수들을 출력
+
+class StudentEx extends Student{
+	int java;
+	
+	public StudentEx(String name, int ban, int no) {
+		this(name, ban, no, -1, -1, -1, -1);
+	}
+	
+	StudentEx(String name, int ban, int no, int kor, int eng, 
+			    int math, int java){
+		super(name, ban, no, kor, eng, math);
+		this.java = java;
+	}
+	
+	void setJava(int java) {
+		this.java = java;
+	}
+	
+	int getJava() {
+		return java;
+	}
+	
+	@Override
+	int getTotal() {
+		// TODO Auto-generated method stub
+		return super.getTotal()+getJava();
+	}
+	
+	@Override
+	float getAverage() {
+		float avg = getTotal()/4f;
+		avg = ((int)((avg+0.05)*10))/10f;
+		return avg;
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return name + ", " + ban 
+				+ ", " + no 
+				+ ", " + kor 
+				+ ", " + eng
+				+ ", " + math
+				+ ", " + java
+				+ ", " + getTotal()
+				+ ", " + getAverage()
+                ;
+	}
+	
+}
+public class Student {
+	String name;
+	int ban;
+	int no;
+	int kor;
+	int eng;
+	int math;
+	
+	Student(String name, int ban, int no){
+		this(name, ban, no, -1, -1, -1);
+	}
+	
+	Student(String name, int ban, int no, int kor, int eng, int math){
+		this.name = name;
+		this.ban = ban;
+		this.no = no;
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+	}
+	
+	void setKor(int kor) {
+		this.kor = kor;
+	}
+	
+	void setEng(int eng) {
+		this.eng = eng;
+	}
+	
+	void setMath(int math) {
+		this.math = math;
+	}
+	
+	int getKor() {
+		return kor;
+	}
+	
+	int getEng() {
+		return eng;
+	}
+	
+	int getMath() {
+		return math;
+	}
+	
+	int getTotal() {
+		return kor + eng + math;
+	}
+	
+	float getAverage() {
+		float avg = getTotal()/3f;
+		avg = ((int)((avg+0.05)*10))/10f;
+		return avg;
+	}
+	
+	@Override
+	public java.lang.String toString() {
+
+		return name + ", " + ban 
+				+ ", " + no 
+				+ ", " + kor 
+				+ ", " + eng
+				+ ", " + math
+				+ ", " + getTotal()
+				+ ", " + getAverage()
+                ;
+	}
+
+}
