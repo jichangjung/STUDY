@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <title>New Document</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <script>
+      // 문자열의 패턴을 체크해보자.
+      //실질적으로 입력양식에 입력되거나 선택된 데이터를 db에 올바르게 저장하기 위해 사전에 검사하는 유효성 체크 시 사용하면 편하다.
+
+      var phone = "01099999999"; //연산에 참여할 데이터는 숫자로, 그렇지 않으면 숫자문자로 취급하자.
+      //			var arr = phone.split("");
+      //
+      //			for (var i=0;i<arr.length ;i++ )
+      //			{
+      //				var str = arr[i];
+      //				if( isNaN(str) == true)
+      //				{
+      //					alert("<주의> 전화번호에 문자가 들어있습니다");
+      //					break;
+      //				}
+      //			}
+      //			if(phone.indexOf("010")!= 0){
+      //				alert("전화번호가 010으로 시작하지 않습니다");
+      //			}
+
+      //********************************************************************
+
+      //			var regExp = new RegExp(/^[0-9]{11}$/); // 첫글자는 숫자로 시작하고 11개이상 나와라.
+      //			var flag = regExp.test(phone);
+      //			if(flag == false)
+      //				alert("전화번호에 오류가 있습니다.");
+      //
+
+      //			var s_name = "정하나";
+      //			var regExp = new RegExp(/^[가-힣]{2,}$/);
+      //			var flag = regExp.test(s_name);
+      //			if(flag == false)
+      //				alert("이름이 문제가 있습니다.");
+      //			else
+      //				alert(s_name);
+
+      //			var s_name = "Jeong Hana";
+      //			var regExp = new RegExp(/^[a-zA-z\s]{2,}$/);
+      //			var flag = regExp.test(s_name);
+      //			if(flag == false)
+      //				alert("영어이름이 아니에요.");
+      //			else
+      //				alert("한글이름 : "+s_name);
+
+      //*************************************본수업*****************************************
+
+      //abc 문자열의 존재 패턴을 관리하는 RegExp 객체를 생성.
+
+      // -> 그냥 문자열에 abc가 있나없나 체크 /abc( )/괄호안에 $혹은 ^
+      var regExp = new RegExp(/abc/);
+      document.write(
+        " zxpabchhhh 문자열에 abc 문자열이 있는가?" +
+          regExp.test("zxpabchhhabc") +
+          "<hr>"
+      );
+
+      //공백이 문자열에 존재하는가
+      var regExp = new RegExp(/[ ]/);
+      document.write(
+        " abc d 문자열에 공백이 있는가?" + regExp.test("abc d") + "<hr>"
+      );
+
+      var regExp = new RegExp(/^abc/); //abc로 시작하는가
+      document.write(" abc로 시작하는가?" + regExp.test("abc d") + "<hr>");
+
+      var regExp = new RegExp(/abc$/); //abc로 끝나는가
+      document.write(" abc로 끝나는가?" + regExp.test("abc d") + "<hr>");
+
+      //처음이 a-z , (두번째가 a-z혹은 0-9혹은 _가 와라.)<- 이걸 5~14개 반복해줘라. =>총 길이 : 6~15
+      var regExp = new RegExp(/^[a-z][a-z0-9_]{5,14}/);
+      document.write(
+        " 처음이 a-z , 두번째가 a-z혹은 0-9혹은 _가 5~14번 반복하는가?" +
+          regExp.test("abc123") +
+          "<hr>"
+      );
+    </script>
+  </body>
+</html>

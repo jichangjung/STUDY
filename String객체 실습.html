@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>String 객체 실습</title>
+  </head>
+  <body>
+    <h3>String 객체 실습</h3>
+    <hr />
+    <script>
+      var userName = prompt("당신의 영문 이름은?", "");
+
+      var upperName = userName.toUpperCase();
+      document.write(upperName, "<br>");
+
+      var userNum = prompt("당신의 연락처는?", "");
+      var result =
+        userNum.substring(0, 3) +
+        "-" +
+        userNum.substring(4, 8) +
+        "-" +
+        userNum.substring(9, 13);
+      document.write(result, "<br>");
+    </script>
+  </body>
+</html>

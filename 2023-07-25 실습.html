@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>2차원 array 객체 출력</title>
+  </head>
+  <body>
+    <h3>2차원 array 객체에 저장된 다수 학생의 성적을 테이블로 출력하기</h3>
+    <hr />
+    <script>
+      var arr = [
+        ["1", "사오정", 97, 98, 70],
+        ["2", "손오공", 99, 88, 90],
+        ["3", "저팔계", 99, 90, 88],
+      ];
+
+      for (var i = 0; i < arr.length; i++) {
+        var total = 0;
+        for (var j = 2; j < arr[i].length; j++) {
+          total += arr[i][j];
+        }
+        arr[i][1] = total; // 1번 인덱스에 총점을 저장
+      }
+
+      for (var i = 0; i < arr.length - 1; i++) {
+        for (var j = i + 1; j < arr.length; j++) {
+          if (arr[i][1] < arr[j][1]) {
+            // 총점을 비교하여 순서를 바꿈
+            var temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+          }
+        }
+      }
+
+      document.write("<table border='1' cellpadding='5'>");
+      document.write(
+        "<tr><th>학생번호<th>이름<th>국어<th>영어<th>수학<th>총점"
+      );
+
+      for (var i = 0; i < arr.length; i++) {
+        var total = 0;
+        document.write("<tr>");
+        for (var j = 0; j < arr[i].length; j++) {
+          if (j === 0) {
+            document.write("<td>" + arr[i][j]);
+          } else if (j === 1) {
+            document.write("<td>" + arr[i][j]);
+          } else {
+            document.write("<td>" + arr[i][j]);
+            total += arr[i][j];
+          }
+        }
+        document.write("<td>" + total);
+      }
+
+      document.write("</table>");
+    </script>
+  </body>
+</html>

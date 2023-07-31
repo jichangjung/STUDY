@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>id&amp;pw 3회이상 틀렸을때</title>
+  </head>
+  <body>
+    <script>
+      function promptEX() {
+        var id = "abcd"; // 정확한 아이디
+        var pw = 123123; // 정확한 비밀번호 (이 코드에서는 사용되지 않음)
+        var i = 3; // 최대 시도 횟수
+        var success = false; // 로그인 성공 여부
+
+        while (true) {
+          var input_id = prompt("아이디를 입력하세요 (" + i + "회 남음)");
+
+          if (input_id == id) {
+            success = true;
+            break;
+          } else {
+            alert("아이디가 틀렸습니다. 재입력해주세요.");
+            i--;
+          }
+
+          if (i == 0) {
+            document.write("로그인 실패");
+            break;
+          }
+        }
+
+        if (success) {
+          document.write(id + "님 환영합니다.");
+        }
+      }
+
+      // 함수 호출
+      promptEX();
+    </script>
+  </body>
+</html>

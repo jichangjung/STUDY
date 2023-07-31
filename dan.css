@@ -1,0 +1,11 @@
+table {
+  display: inline-block;
+}
+table,
+table td {
+  border-collapse: collapse;
+  border: 1px solid #000000;
+  margin: 3px;
+  font-size: 9pt;
+  font-family: tahoma, 굴림, 돋음, verdana;
+}
